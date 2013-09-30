@@ -12,9 +12,6 @@ class Project2_Del1 {
         
         DeviceConfigParser dcf = new DeviceConfigParser();
         
-        
-        long startTime, endTime;
-        
         try {
             String command = br.readLine();
             
@@ -45,9 +42,11 @@ class Project2_Del1 {
                 } else {
                     System.out.println("Invalid command. Did you load the configuration file?");
                 }
+                if(dcf.hasLoadedXML()) {
+                    dcf.reset();
+                }
                 
                 command = br.readLine();
-                dcf.reset();
             }
         } catch (IOException ioe) {
             System.out.println("IO error trying to read command!");
