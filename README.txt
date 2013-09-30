@@ -1,5 +1,4 @@
-device-config-parser
-====================
+
 device-config-parser
 ====================
 Project 2: SOA-based enterprise configuration analysis
